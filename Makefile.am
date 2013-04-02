@@ -56,8 +56,8 @@ check-local:
 
 install-exec-hook:
 	$(MKDIR_P) $(DESTDIR)/$(pkgdatadir)
-	$(LN_S) $(bindir)/consolehelper $(DESTDIR)/$(pkgdatadir)/ovirt-locksession
-	$(LN_S) $(bindir)/consolehelper $(DESTDIR)/$(pkgdatadir)/ovirt-shutdown
-	$(LN_S) $(bindir)/consolehelper $(DESTDIR)/$(pkgdatadir)/ovirt-hibernate
-	$(INSTALL) -d $(DESTDIR)/$(localstatedir)/lock/subsys/ovirt-guest-agent
+	$(LN_S) -f $(bindir)/consolehelper $(DESTDIR)/$(pkgdatadir)/ovirt-locksession
+	$(LN_S) -f $(bindir)/consolehelper $(DESTDIR)/$(pkgdatadir)/ovirt-shutdown
+	$(LN_S) -f $(bindir)/consolehelper $(DESTDIR)/$(pkgdatadir)/ovirt-hibernate
+	$(INSTALL) -d $(DESTDIR)/$(localstatedir)/lock/ovirt-guest-agent
 	$(INSTALL) -d $(DESTDIR)/$(localstatedir)/log/ovirt-guest-agent
