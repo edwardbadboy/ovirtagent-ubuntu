@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Dependencies: make gcc libtool autoconf libpam-dev pep8 usermode python-ethtool python-dev python-dbus"
+echo "Dependencies: make gcc libtool autoconf libpam-dev pep8 usermode python-ethtool python-dev python-dbus pkg-config"
 echo "Please resolve the dependencies manually by apt-get install them, then run this script to build and install ovirt guest agent."
 echo "[Press ENTER to continue]"
 read
